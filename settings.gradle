@@ -1,2 +1,2 @@
-include 'springboot-dubbox-domain'
+include 'springboot-dubbox-domain', 'springboot-dubbox-web', 'springboot-dubbox-provider'
 

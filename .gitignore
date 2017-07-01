@@ -1,3 +1,5 @@
 .idea/
 springboot-dubbox-demo.iml
 out/
+.gradle/
+build/

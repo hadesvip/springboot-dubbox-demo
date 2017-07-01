@@ -1,39 +1,40 @@
-buildscript {
-    ext {
-        springBootVersion = '1.5.4.RELEASE'
-    }
+//所有项目的配置
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'war'
+    apply plugin: 'maven'
+
+    //包名
+    group = 'com'
+    version = '0.0.1-SNAPSHOT'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    //仓库
     repositories {
         mavenLocal()
         maven {
             url "http://maven.aliyun.com/nexus/content/groups/public"
         }
         mavenCentral()
+    }
 
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-    }
+    archivesBaseName = project.name
 }
 
-apply plugin: 'java'
-apply plugin: 'idea'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'maven'
-
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
-repositories {
-    mavenLocal()
-    maven {
-        url "http://maven.aliyun.com/nexus/content/groups/public"
-    }
-    mavenCentral()
+//所有子项目通用配置
+subprojects {
+    [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
 }
 
-
-dependencies {
-    compile('org.springframework.boot:spring-boot-starter')
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+//公用参数
+ext {
+    thymeleafVersion = '3.0.6.RELEASE'
+    thymeleafSpringVersion='3.0.6.RELEASE'
+    thymeleafLayoutDialectVersion = '2.2.2'
+    okhttpVersion = '3.8.1'
+    springBootVersion = '1.5.4.RELEASE'
 }
+
