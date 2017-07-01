@@ -14,16 +14,17 @@ sourceSets {
 dependencies {
 
     compile(
-            'org.springframework.boot:spring-boot-starter-web:' + rootProject.ext.springBootVersion,
-            'com.squareup.okhttp3:okhttp:' + rootProject.ext.okhttpVersion,
-            'org.thymeleaf:thymeleaf-spring4:' + rootProject.ext.thymeleafSpringVersion,
-            'org.thymeleaf:thymeleaf:' + rootProject.ext.thymeleafVersion,
-            'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:' + thymeleafLayoutDialectVersion
+            'org.springframework.boot:spring-boot-starter-web:' + springBootVersion,
+            'com.squareup.okhttp3:okhttp:' + okhttpVersion,
+            'org.thymeleaf:thymeleaf-spring4:' + thymeleafSpringVersion,
+            'org.thymeleaf:thymeleaf:' + thymeleafVersion,
+            'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:' + thymeleafLayoutDialectVersion,
+            'com.alibaba:fastjson:' + fastjsonVersion
 
             //'org.springframework.boot:spring-boot-starter-thymeleaf:' + rootProject.ext.springBootVersion
     )
-    providedRuntime('org.springframework.boot:spring-boot-starter-tomcat:' + rootProject.ext.springBootVersion)
-    testCompile('org.springframework.boot:spring-boot-starter-test:' + rootProject.ext.springBootVersion)
-    compileClasspath('org.springframework.boot:spring-boot-gradle-plugin:' + rootProject.ext.springBootVersion)
+    providedRuntime('org.springframework.boot:spring-boot-starter-tomcat:' + springBootVersion)
+    testCompile('org.springframework.boot:spring-boot-starter-test:' + springBootVersion)
+    compileClasspath('org.springframework.boot:spring-boot-gradle-plugin:' + springBootVersion)
 
 }

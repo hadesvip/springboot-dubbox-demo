@@ -1,0 +1,11 @@
+spring:
+  thymeleaf:
+    prefix: /WEB-INF/templates/
+    suffix: .html
+    cache: true
+    check-template-location: true
+    check-template: true
+    content-type: text/html
+    encoding: UTF-8
+    enabled: true
+    mode: HTML5
