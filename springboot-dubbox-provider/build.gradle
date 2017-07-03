@@ -1,6 +1,25 @@
-
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter:' + rootProject.ext.springBootVersion)
-    testCompile('org.springframework.boot:spring-boot-starter-test:' + rootProject.ext.springBootVersion)
-    compileClasspath('org.springframework.boot:spring-boot-gradle-plugin:' + rootProject.ext.springBootVersion)
+
+    compile(
+            project(':springboot-dubbox-domain'),
+            'org.springframework.boot:spring-boot-starter:' + springBootVersion,
+            'org.springframework.boot:spring-boot-starter-web:' + springBootVersion,
+            'com.alibaba:dubbo:' + dubboVersion,
+            'org.projectlombok:lombok:' + lombokVersion,
+            'org.javassist:javassist:' + javassistVersion,
+            'io.netty:netty:' + nettyVersion,
+//            'org.apache.zookeeper:zookeeper:' + zkVersion ,
+            'com.github.sgroschupf:zkclient:' + zkclientVersion
+    )
+
+    compile(
+            'org.apache.zookeeper:zookeeper:' + zkVersion
+    ) {
+        exclude group: 'org.slf4j'
+        exclude group: 'log4j'
+
+    }
+
+    testCompile('org.springframework.boot:spring-boot-starter-test:' + springBootVersion)
+    compileClasspath('org.springframework.boot:spring-boot-gradle-plugin:' + springBootVersion)
 }

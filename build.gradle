@@ -2,7 +2,6 @@
 allprojects {
     apply plugin: 'java'
     apply plugin: 'idea'
-    apply plugin: 'war'
     apply plugin: 'maven'
 
     //包名
@@ -32,10 +31,16 @@ subprojects {
 //公用参数
 ext {
     thymeleafVersion = '3.0.6.RELEASE'
-    thymeleafSpringVersion='3.0.6.RELEASE'
+    thymeleafSpringVersion = '3.0.6.RELEASE'
     thymeleafLayoutDialectVersion = '2.2.2'
     okhttpVersion = '3.8.1'
     springBootVersion = '1.5.4.RELEASE'
-    fastjsonVersion='1.2.33'
+    fastjsonVersion = '1.2.33'
+    lombokVersion = '1.16.16'
+    dubboVersion = '2.8.4'
+    javassistVersion = '3.18.2-GA'
+    nettyVersion = '3.10.6.Final'
+    zkVersion = '3.4.6'
+    zkclientVersion = '0.1'
 }
 

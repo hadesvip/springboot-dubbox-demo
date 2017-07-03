@@ -16,7 +16,7 @@ public class OKHttpTests {
     public void testOKHttp() throws IOException {
         OkHttpClient httpClient = new OkHttpClient();
 
-        String url = "http://api.shipxy.com/apicall/SearchShip?" +
+        String url = "http://service.shipxy.com/apicall/SearchShip?" +
                 "v=2&k=bbde2717cbd24f009210deec82ab8b26&enc=1&kw=cosco&tp=1&max=3";
 
         Request request = new Request.Builder()

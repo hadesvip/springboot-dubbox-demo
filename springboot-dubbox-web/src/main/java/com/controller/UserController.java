@@ -12,6 +12,7 @@ public class UserController {
 
     @RequestMapping("/getUser")
     public String getUser() {
+
         return "hello,getUser...";
     }
 }

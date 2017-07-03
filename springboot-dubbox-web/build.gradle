@@ -1,6 +1,8 @@
+apply plugin: 'war'
 dependencies {
 
     compile(
+            project(':springboot-dubbox-domain'),
             'org.springframework.boot:spring-boot-starter-web:' + springBootVersion,
             'com.squareup.okhttp3:okhttp:' + okhttpVersion,
             'org.thymeleaf:thymeleaf-spring4:' + thymeleafSpringVersion,
